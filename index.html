@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>موازنة الطاقة — الفصل الأول | دليل الكوز والميد</title>
+<meta name="description" content="موقع دراسة تفاعلي لموازنة الطاقة (Energy Balance) — الفصل الأول، شرح عربي وحل كل أسئلة السنين.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="css/style.css?v=5">
+<script>
+  try { var t = localStorage.getItem('eb_theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  try { var m = localStorage.getItem('eb_mode'); document.documentElement.dataset.mode = m || 'quiz'; } catch (e) { document.documentElement.dataset.mode = 'quiz'; }
+</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" id="menuBtn" aria-label="القائمة">
+    <svg viewBox="0 0 24 24" width="24" height="24"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <a class="brand" href="#/home">موازنة الطاقة <span>Ch.1</span></a>
+  <div class="modeswitch" role="group" aria-label="وضع الامتحان">
+    <button data-setmode="quiz">وضع الكوز</button>
+    <button data-setmode="mid">وضع الميد</button>
+  </div>
+  <button class="iconbtn" id="themeBtn" aria-label="الوضع الليلي">
+    <svg viewBox="0 0 24 24" width="22" height="22"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+  </button>
+</header>
+
+<div class="layout">
+  <nav id="drawer" aria-label="الأقسام"></nav>
+  <div id="scrim"></div>
+  <main id="main" tabindex="-1"></main>
+</div>
+
+<button class="fab" id="fabSheet">ورقة القوانين</button>
+
+<div id="sheetModal" class="modal" hidden>
+  <div class="modal-card">
+    <div class="modal-head">
+      <strong>ورقة القوانين السريعة</strong>
+      <div>
+        <button class="btn small" onclick="window.print()">اطبع</button>
+        <button class="btn small ghost" id="sheetClose">سكّر</button>
+      </div>
+    </div>
+    <div id="sheetBody"></div>
+  </div>
+</div>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="js/steam.js?v=5"></script>
+<script defer src="js/core.js?v=5"></script>
+<script defer src="js/p-home.js?v=5"></script>
+<script defer src="js/p-11.js?v=5"></script>
+<script defer src="js/p-12.js?v=5"></script>
+<script defer src="js/p-14.js?v=5"></script>
+<script defer src="js/p-exams.js?v=5"></script>
+<script defer src="js/p-review.js?v=5"></script>
+<script defer src="js/models.js?v=5"></script>
+<script defer src="js/app.js?v=5"></script>
+</body>
+</html>
