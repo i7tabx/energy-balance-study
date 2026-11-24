@@ -121,6 +121,9 @@ ${E.sheetHTML()}
     { q: 'Heat capacity at constant pressure for ideal gases is related to Cv by:', c: ['Cp = Cv', 'Cp = Cv − R', 'Cp = Cv + R', 'Cp = R/Cv'], a: 2, why: 'ولسوائل وصلبة Cp ≈ Cv.', src: 'الكتاب 1.5', scope: 'mid' },
     { q: 'Heat transferred causing a change of phase at constant T and P is called:', c: ['sensible heat', 'latent heat', 'shaft work', 'heat of reaction'], a: 1, why: 'Latent = كامنة؛ Sensible = تغير الحرارة بدون تغير طور.', src: 'الكتاب 1.5', scope: 'mid' },
     { q: 'Sensible heat is the heat transferred to:', c: ['change the phase', 'raise or lower the temperature without phase change', 'do shaft work', 'mix solutions'], a: 1, why: 'تعريف الكتاب 1.4.1.', src: 'الكتاب 1.4', scope: 'mid' },
+    { q: 'In a Cp polynomial from Appendix A.2 whose "Form" column says °C, you must substitute T in:', c: ['K always', '°C', '°F', 'any unit'], a: 1, why: 'استخدم نفس الوحدة المكتوبة بالجدول — التعويض بالكلفن بمعادلة °C يعطي غلط كبير.', src: 'Final 2025', scope: 'mid' },
+    { q: 'When integrating Cp = a + bT + cT² + dT³ from T1 to T2, the c-term becomes:', c: ['c(T2 − T1)', 'c/2 (T2² − T1²)', 'c/3 (T2³ − T1³)', '3c (T2² − T1²)'], a: 2, why: 'الأس يزيد واحد ونقسم عليه.', src: 'الكتاب 1.4', scope: 'mid' },
+    { q: 'Steam that condenses at constant pressure from quality x to saturated liquid has Δh equal to:', c: ['+x·hfg', '−x·hfg', '−hg', 'hf − hg'], a: 1, why: 'h = hf + x·hfg → hf، فالفرق −x·hfg (مثال 1.18 و 1.19).', src: 'مثال 1.18', scope: 'mid' },
     { q: 'Properties whose change depends only on the initial and final states are called:', c: ['path functions', 'state properties', 'extensive properties', 'latent properties'], a: 1, why: 'h و u state properties — ما تعتمد على المسار، لهذا نكدر نسوي مسار افتراضي.', src: 'الكتاب 1.5', scope: 'mid' }
   ];
 
@@ -143,7 +146,11 @@ ${E.sheetHTML()}
     { q: 'For frictionless flows with no ___ work, the mechanical energy balance simplifies to Bernoulli’s equation.', a: [['shaft']], src: 'جمل الكتاب' },
     { q: 'Enthalpy is the sum of the ___ energy plus the flow work ___.', a: [['internal'], ['pv', 'p v', 'pressure volume', 'pressure times volume']], src: 'جمل الكتاب' },
     { q: 'Heat transferred to change the phase at constant temperature and pressure is known as ___ heat.', a: [['latent']], src: 'الكتاب 1.5', scope: 'mid' },
-    { q: 'For most incompressible liquids and solids Cp ≈ ___, and for ideal gases Cp = Cv + ___.', a: [['cv'], ['r']], src: 'الكتاب 1.5', scope: 'mid' }
+    { q: 'For most incompressible liquids and solids Cp ≈ ___, and for ideal gases Cp = Cv + ___.', a: [['cv'], ['r']], src: 'الكتاب 1.5', scope: 'mid' },
+    { q: 'Sensible heat is the heat transferred to raise or lower the temperature of a material in the absence of ___ change.', a: [['phase']], src: 'الكتاب 1.4', scope: 'mid' },
+    { q: 'h and u are ___ properties; their values depend only on the state of the species and not on the ___ taken.', a: [['state'], ['path']], src: 'الكتاب 1.4', scope: 'mid' },
+    { q: 'Heat is ___ during condensation, and heat is required to vaporize a liquid or melt a solid.', a: [['released']], src: 'الكتاب 1.5', scope: 'mid' },
+    { q: 'The thermodynamic property of an ideal mixture is the ___ of the contributions from the individual compounds.', a: [['sum']], src: 'الكتاب 1.5.2', scope: 'mid' }
   ];
 
   E.page({

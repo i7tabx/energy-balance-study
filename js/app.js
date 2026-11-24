@@ -18,7 +18,7 @@
   const AR = /[؀-ۿ]/, LAT = /[A-Za-z0-9Ͱ-Ͽ°ṁυ₀-₉]/;
   const ARSPLIT = /([؀-ۿً-ٟ]+(?:[\s،؛؟.:]+[؀-ۿً-ٟ]+)*)/;
   const INLINE = new Set(['SUB', 'SUP', 'B', 'I', 'U', 'EM', 'STRONG', 'CODE', 'SMALL', 'SPAN', 'A']);
-  const SKIP = el => el.matches('.katex, .ltr, .en, .statement, .math, svg, script, style, input, select, textarea, bdi, .num, table.given, .qtext, .choice, code');
+  const SKIP = el => !!el.closest('svg, .katex, bdi') || el.matches('.ltr, .en, .statement, .math, script, style, input, select, textarea, .num, table.given, .qtext, .choice, code');
   E.bidi = function iso(el) {
     if (el.nodeType !== 1 || SKIP(el)) return;
     Array.from(el.childNodes).forEach(n => {
@@ -172,7 +172,7 @@
     const targets = new Set();
     muts.forEach(m => m.addedNodes.forEach(n => {
       const t = n.nodeType === 1 ? n : n.parentElement;
-      if (t && !t.closest('.katex, bdi')) targets.add(t);
+      if (t && !t.closest('.katex, bdi, svg')) targets.add(t);
     }));
     if (!targets.size) return;
     mo.disconnect();

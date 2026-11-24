@@ -2,7 +2,7 @@
   const R = String.raw, E = window.EB;
   E.examTypes = [];
   E.examples['f25-q1a'] = { id: 'f25-q1a', scope: 'quiz', title: 'Final 2025 Q1 A' };
-  const T = (id, title, scope) => { E.examTypes.push({ id, title, scope }); return `<h2 id="t-${id}"${scope === 'mid' ? ' data-scope="mid"' : ''}>${title} ${scope === 'mid' ? '<span class="tag new">جديد للميد</span>' : ''}</h2>`; };
+  const T = (id, title, scope) => { if (!E.examTypes.some(t => t.id === id)) E.examTypes.push({ id, title, scope }); return `<h2 id="t-${id}"${scope === 'mid' ? ' data-scope="mid"' : ''}>${title} ${scope === 'mid' ? '<span class="tag new">جديد للميد</span>' : ''}</h2>`; };
 
   const windmill = R`<svg viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg">${E.svgStyle(931)}
     <rect class="bd" x="60" y="10" width="150" height="180" rx="10"/>
@@ -306,7 +306,6 @@ ${E.ex({
 
 ${T('hx', 'نوع 6: مبادل حراري بالبخار', 'quiz')}
 <div class="card">بأسئلة السنين المبادل الحراري يجي دائماً ويا <b>Cp</b> (مزيج أسيتون/بنزين أو تبريد دهن) — هذا مادة الميد <span class="tag new">جديد للميد</span>. للكوز راجع <a href="#/s11dev">مثال 1.9</a> (بخار يتكثف) — نفس الفكرة: <b>Q = ṁ(h<sub>out</sub> − h<sub>in</sub>)</b>.</div>
-<div data-scope="mid" id="mid-hx-slot"></div>
 
 ${T('units', 'نوع 7: تحويل وحدات — التوصيل الحراري Q = kAΔT/Δx', 'quiz')}
 ${E.ex({
@@ -338,7 +337,7 @@ ${T('theory', 'نوع 8: نظري — رسم الأنظمة، فراغات، MCQ
 <b>الجواب:</b> <span class="ltr">Internal energy is all the energy of a system that is not kinetic or potential energy — energy due to all molecular, atomic, and subatomic motions and interactions (e.g. translation, rotation and vibration of molecules, intermolecular attractions, chemical bonds, nuclear energy).</span></div>
 <div class="box info"><strong>كل الـ MCQ والفراغات</strong> موجودة ببنك الأسئلة التفاعلي — <a href="#/quizbank">روح للبنك ←</a></div>
 
-<div data-scope="mid" id="mid-exams-slot"></div>
+${E.midExams ? E.midExams() : ''}
 
 <h2 id="t-out">خارج المادة (ما نحلها)</h2>
 ${E.table(['الورقة', 'السؤال', 'ليش خارج'], [

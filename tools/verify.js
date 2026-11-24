@@ -77,3 +77,37 @@ r('MT24 Q2 dPE', 1.5 * 9.81 * 240, 'W');
   r('O2 A V2', 100 * 1.5 / 6.5, 'L'); r('O2 B V2', 200 * 2.5 / 8.5, 'L'); }
 
 for (const [n, v, u, ref] of out) console.log(n.padEnd(26), String(v).padStart(14), u.padEnd(12), ref === '' ? '' : 'book: ' + ref);
+
+// ================= Phase 2 (midterm: 1.4–1.5)
+const P2 = [];
+const q = (n, v, u, ref) => P2.push([n, +v.toPrecision(6), u, ref === undefined ? '' : ref]);
+q('1.14 Q', 200 * (0.855 * 130 + 9.42e-4 * (150 ** 2 - 20 ** 2) / 2), 'kJ', 24312);
+q('1.15 dh', 456 - 470, 'kJ/kg', -14);
+q('1.15 d(Pv) table', (1.30 * 0.310 - 3.54 * 0.120) * 101.325, 'kJ/kg');
+q('1.15 du table', -14 - (1.30 * 0.310 - 3.54 * 0.120) * 101.325, 'kJ/kg', -12);
+q('1.15 du book 0.312', -14 - (1.30 * 0.312 - 3.54 * 0.120) * 101.325, 'kJ/kg');
+q('1.16 dH', 100 * 0.5 * 60 / 1000, 'kcal/s', 3.0); q('1.16 dH kW', 100 * 0.5 * 60 * 4.184 / 1000, 'kW');
+{ const m = 15000 / 3600 / 0.1943, u2 = 15000 / 3600 / (Math.PI * 0.15 ** 2 / 4); q('1.17 m', m, 'kg/s', 21.45); q('1.17 v2', u2, 'm/s', 235.79);
+  q('1.17 hf23 IF97', S.satByT(K(23)).f.h, 'kJ/kg', 96.2); q('1.17 dh', 2776.2 - 96.2, 'kJ/kg', 2680); q('1.17 Q', m * 2680 + 0.5 * m * u2 * u2 / 1000, 'kW', 58082); q('1.17 dKE', 0.5 * m * u2 * u2 / 1000, 'kW'); }
+{ const h1 = 762.6 + 0.9 * 2013.6; q('1.18 h1', h1, 'kJ/kg', 2574.84); q('1.18 Q', 100 / 3600 * (762.6 - h1), 'kW', -50.34); }
+{ const a = 0.7 * 123 + 0.3 * 126.5, b = 0.7 * 0.186 + 0.3 * 0.234; q('1.19 a', a, ''); q('1.19 b', b, '');
+  const dh = a * 40 + b / 2 * (50 ** 2 - 10 ** 2), dhb = 124 * 40 + 0.1 * 2400; q('1.19 dhmix exact', dh, 'J/mol'); q('1.19 dhmix book', dhb, 'J/mol', 5200);
+  const dhs = 858.6 + 0.9 * 1933.2 - 858.6; q('1.19 hs1', 858.6 + 0.9 * 1933.2, 'kJ/kg', 2598.5); q('1.19 ms', 1e6 * dhb / 1000 / dhs, 'kg/h', 2990);
+  q('F25 Q2 ms kg/s', 1e6 * dhb / 1000 / dhs / 3600, 'kg/s');
+  const hfg17 = 1921.5; q('F23 Q3 ms (17 bar abs)', 1e6 * dhb / 1000 / (0.9 * hfg17), 'kg/h'); }
+{ const m3 = 100 * (2675.4 - 3278) / (3074 - 3278); q('1.20 m3', m3, 'kg/h', 295); q('1.20 m2', m3 - 100, 'kg/h', 195); }
+{ const hw90 = 376.8, hw7 = 29.3; const c = 2700 / 3600 * (209.5 - 8.124), wBook = 2000 / 3600 * (hw7 - hw90), w = 1600 / 3600 * (hw7 - hw90), ac = 400 / 3600 * 1.463 * (7 - 90);
+  q('1.21 coolant', c, 'kW', 151); q('1.21 water (book 2000)', wBook, 'kW', -193); q('1.21 water (1600)', w, 'kW'); q('1.21 acid', ac, 'kW', -13.49);
+  q('1.21 Q book', c + wBook + ac, 'kW', -55.49); q('1.21 Q correct', c + w + ac, 'kW');
+  q('hf 90C IF97', S.satByT(K(90)).f.h, ''); q('hf 7C IF97', S.satByT(K(7)).f.h, ''); q('hf 2C', S.satByT(K(2)).f.h, ''); q('hf 50C', S.satByT(K(50)).f.h, ''); }
+{ const m = 295 / 60, v = 0.1166, A = Math.PI * 0.06 ** 2 / 4, u = m * v / A; const dH = 295 * 2793 - 120 * 125.7 - 175 * 217, dKE = 0.5 * 295 * u * u / 1000;
+  q('F24 Q4 u2', u, 'm/s'); q('F24 Q4 dH', dH, 'kJ/min'); q('F24 Q4 dKE', dKE, 'kJ/min'); q('F24 Q4 Q', dH + dKE, 'kJ/min'); }
+{ // Cp conversion acetylene
+  const a = 9.89, b = 0.8273e-2, c = -0.3783e-5, o = 459.67;
+  const aR = a - b * o + c * o * o, bR = b - 2 * c * o, cR = c; q('F25 R a', aR, ''); q('F25 R b', bR, ''); q('F25 R c', cR, '');
+  const aK = aR, bK = 1.8 * (b - 2 * c * o), cK = c * 3.24; q('F25 K a(Btu)', aK, ''); q('F25 K b', bK, ''); q('F25 K c', cK, '');
+  q('F25 K a J', aK * 4.184, 'J/molK'); q('F25 K b J', bK * 4.184, ''); q('F25 K c J', cK * 4.184, '');
+  const TF = 100, TR = TF + o, TK = (TF + o) / 1.8; q('check F', a + b * TF + c * TF * TF, ''); q('check R', aR + bR * TR + cR * TR * TR, ''); q('check K (Btu)', aK + bK * TK + cK * TK * TK, ''); }
+{ // hypothetical path demo: water 25C liquid -> 150C vapor at 1 atm, per kg
+  const l = 4.19 * 75, v = 2256.9, g = 2.0 * 50; q('path liquid', l, 'kJ/kg'); q('path total', l + v + g, 'kJ/kg'); q('table h(150,1atm)-hf(25)', S.stateFromPT(101.325, K(150)).h - S.satByT(K(25)).f.h, 'kJ/kg'); }
+for (const [n, v, u, ref] of P2) console.log(n.padEnd(26), String(v).padStart(14), u.padEnd(12), ref === '' ? '' : 'book: ' + ref);
