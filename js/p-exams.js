@@ -192,6 +192,50 @@ ${E.ex({
   trap: 'إذا حولت ΔP لـ absolute (17 bar) وطرحت 0 تطلع غلط. فرق الضغط = 16 bar لأن الخزان جوي.'
 })}
 
+${E.ex({
+  id: 'qz26-pump', title: 'Quiz 2026 — Fire-extinguisher pump (200 psi)', src: 'كوز 2026 (من صور أصدقائك) · مثال 1.12 بوحدات إنكليزية',
+  statement: 'A large tank that is filled with water is open to the atmosphere. Water is taken from the tank, passed through a pump, and then delivered to the hoses of a firefighting extinguisher in a chemical factory. It is desired to deliver <b>[V̇ — not readable in the photo]</b> of water per second at a pressure of 200 psi (gauge). If there is a negligible elevation change between the water level in the tank and the discharge of the pump, no change in the diameter of the pipes and hoses, and if the pump has an efficiency of 65.0%, how much work must be supplied to the pump in order to meet the pressure and discharge rate specifications?',
+  diagram: E.dev({ kind: 'pump', name: 'Pump', ins: [['open tank', 'P₁ = 1 atm']], outs: [['hoses', '200 psi (gauge)']], W: 'Ws = ? (η = 65%)', Wdir: 'in' }),
+  given: [['P₂', '200 psi (gauge)', R`\(1.379\times10^{6}\) Pa above atm`], ['P₁', 'tank open to atm', '0 gauge'], ['η', '65.0%', '0.65'], [R`\(\dot V\)`, 'not readable', 'solved per 1 ft³/s + general formula']],
+  find: 'Actual pump work',
+  assume: [[R`\Delta z = 0,\ \Delta\upsilon = 0,\ F = 0`, 'مذكورة بالسؤال (نفس مثال 1.12).'], [R`\Delta P = 200\ \text{psi}`, 'الخزان جوي والمخرج gauge، فالـ atm ينطرح.']],
+  steps: [
+    [R`\Delta P = 200\ \text{psi}\times6894.76\ \tfrac{\text{Pa}}{\text{psi}} = 1.379\times10^{6}\ \text{Pa}`, '1 psi = 6894.76 Pa (أو 14.696 psi = 1 atm).'],
+    [R`-\frac{W_s}{\dot m} = \frac{\Delta P}{\rho} = \frac{1.379\times10^{6}}{1000} = 1379\ \text{J/kg}\ (\text{ideal})`, 'MEB بعد حذف الحدود الصفرية.'],
+    [R`\text{actual: } \frac{1379}{0.65} = 2121\ \text{J/kg}`, 'نقسم على الكفاءة.'],
+    [R`W_{s,actual} = \frac{\dot V\,\Delta P}{\eta}\qquad(\dot m = \rho\dot V)`, 'القانون العام — عوض التدفق اللي بالسؤال.'],
+    [R`\text{e.g. } \dot V = 1\ \text{ft}^3/\text{s} = 0.02832\ \text{m}^3/\text{s}:\ \ W = \frac{0.02832\times1.379\times10^{6}}{0.65} = 60.1\ \text{kW} = 80.6\ \text{hp}`, 'مثال إذا التدفق 1 ft³/s — اضرب بالرقم الحقيقي.']
+  ],
+  answer: R`\[-W_{s,actual} = \frac{\dot V\,(1.379\times10^{6}\ \text{Pa})}{0.65}\ \Rightarrow\ \approx 60.1\ \text{kW}\ (80.6\ \text{hp})\ \text{per 1 ft}^3/\text{s}\]`,
+  check: 'نفس منطق مثال 1.12 بالضبط بس الضغط بالـ psi.',
+  trap: 'psi → Pa (×6894.76). وإذا التدفق بالـ ft³/s حوله: 1 ft³ = 0.02832 m³. والكفاءة: اقسم.',
+  note: 'رقم التدفق مضبب بالصورة. إذا تعرف الرقم من أصدقائك كلّي وأحطه بالحل.'
+})}
+
+${T('throttle', 'نوع جديد: صمام خنق + خلط بخار (كوز 2026)', 'quiz')}
+${E.ex({
+  id: 'qz26-mix', title: 'Quiz 2026 — Throttling valves + adiabatic mixing chamber', src: 'كوز 2026 (من صور أصدقائك) · فكرة مثال 1.20 + صمام الخنق',
+  intro: 'هذا السؤال يحتاج <b>صمام الخنق</b> (h<sub>in</sub> = h<sub>out</sub>) و<b>الخلط</b> (Σṁh). الخلط من القسم 1.5.2 بس جه بالكوز، فخليته يطلع بالوضعين.',
+  statement: 'Saturated steam at 2 bar is discharged from a steam turbine at a rate of 1,500 kg/h. Before entering a mixing chamber, this steam passes through a throttling valve and its pressure is reduced to 1 atm. Superheated steam available from a second source at 5 bar and 450°C is also passed through a throttling valve to reduce its pressure to 1 atm. The two steam streams are then mixed in an adiabatic mixing chamber to produce superheated steam at 1 atm and 300°C. Assuming negligible changes in kinetic and potential energies, calculate:<br>1. The enthalpy of the steam discharged from the turbine.<br>2. The enthalpy of the second steam stream after throttling.<br>3. The mass flow rate of the superheated steam at 300°C.<br>4. The required mass flow rate of the steam supplied from the second source.<br>5. The volumetric flow rate of the second steam source at its initial conditions (5 bar and 450°C).<br>Use the appropriate steam tables for all property calculations.',
+  diagram: E.dev({ kind: 'mixer', name: 'Mix', ins: [['(1) 1500 kg/h, sat. 2 bar', '→ valve → 1 atm'], ['(2) ṁ₂ = ?, 5 bar, 450°C', '→ valve → 1 atm']], outs: [['(3) ṁ₃ = ?', '1 atm, 300°C']] }),
+  given: [['Stream 1', 'sat. steam 2 bar, 1500 kg/h', '0.20 MN/m²'], ['Stream 2', '5 bar, 450°C', '0.50 MN/m²'], ['Stream 3', '1 atm, 300°C', '≈ 0.1 MN/m²'], ['Valves', 'throttling', 'h_in = h_out']],
+  find: 'h₁, h₂ after valve, ṁ₃, ṁ₂, V̇₂ at 5 bar & 450°C',
+  assume: [[R`Q = 0,\ W_s = 0`, 'الصمام والخلاط adiabatic وما بيهم شغل.'], [R`\Delta KE = \Delta PE = 0`, 'مذكورة.'], [R`h_{in} = h_{out}`, 'صمام الخنق: الإنثالبي ثابت (isenthalpic) — من جدول الأجهزة.']],
+  steps: [
+    [R`\text{(1) Table 8, 0.20 MN/m}^2:\ h_1 = h_g = 2706.3\ \text{kJ/kg}`, '"Saturated steam" = بخار مشبع جاف → h<sub>g</sub>.'],
+    [R`\text{After valve 1: } h = 2706.3 > h_g(1\ \text{atm}) = 2676.0 \Rightarrow \text{superheated at 1 atm }(\approx115^\circ\text{C})`, 'ملاحظة حلوة: الخنق يحول البخار المشبع لمحمص!'],
+    [R`\text{(2) Table 9, 0.5 MN/m}^2,\ 450^\circ\text{C}:\ h_2 = 3377\ \text{kJ/kg} = h_2\ \text{after throttling}`, 'الصمام ما يغير h.'],
+    [R`h_3:\ \text{Table 9, 0.1 MN/m}^2\ (\approx1\ \text{atm}),\ 300^\circ\text{C} = 3074\ \text{kJ/kg}`, 'فرق 1 bar و 1 atm مهمل للمحمص.'],
+    [R`\text{Mass: } \dot m_3 = 1500 + \dot m_2;\qquad \text{Energy: } 1500(2706.3) + \dot m_2(3377) = \dot m_3(3074)`, 'خلاط adiabatic: الداخل = الطالع.'],
+    [R`\text{(4) } \dot m_2 = \frac{1500\,(3074 - 2706.3)}{3377 - 3074} = \frac{1500\times367.7}{303} = 1820\ \text{kg/h}`, 'عوضنا موازنة الكتلة بالطاقة.'],
+    [R`\text{(3) } \dot m_3 = 1500 + 1820 = 3320\ \text{kg/h}`, ''],
+    [R`\text{(5) } v(5\ \text{bar},450^\circ\text{C}) = 0.664\ \text{m}^3/\text{kg}\ \Rightarrow\ \dot V_2 = 1820\times0.664 = 1.21\times10^{3}\ \text{m}^3/\text{h}`, 'v = 1/ρ من جدول الكثافة (Table 11).']
+  ],
+  answer: R`\[h_1 = 2706.3,\ \ h_2 = 3377\ \text{kJ/kg};\quad \dot m_3 \approx 3320,\ \ \dot m_2 \approx 1820\ \text{kg/h};\quad \dot V_2 \approx 1209\ \text{m}^3/\text{h}\ (0.336\ \text{m}^3/\text{s})\]`,
+  check: '300°C بين 115°C و 447°C (حرارة التيارين بعد الخنق)، وأقرب شوية للحار، فلازم ṁ₂ > ṁ₁ ✓ (1820 > 1500).',
+  trap: 'لا تغير h بعد الصمام — الخنق يغير P و T بس الإنثالبي نفسه. والسؤال (5) يطلب الحجم بالظروف <b>الأصلية</b> (5 bar، 450°C) مو بعد الصمام.'
+})}
+
 ${T('steam', 'نوع 5: حالة البخار والجودة (Steam state & quality)', 'quiz')}
 ${E.ex({
   id: 'mt23a-q1a', title: 'Midterm 20/11/2023 — Q1 A (7 Marks)', src: 'Midterm 2023 (a)', scope: 'quiz',

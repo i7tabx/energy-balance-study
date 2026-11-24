@@ -111,3 +111,7 @@ q('1.16 dH', 100 * 0.5 * 60 / 1000, 'kcal/s', 3.0); q('1.16 dH kW', 100 * 0.5 * 
 { // hypothetical path demo: water 25C liquid -> 150C vapor at 1 atm, per kg
   const l = 4.19 * 75, v = 2256.9, g = 2.0 * 50; q('path liquid', l, 'kJ/kg'); q('path total', l + v + g, 'kJ/kg'); q('table h(150,1atm)-hf(25)', S.stateFromPT(101.325, K(150)).h - S.satByT(K(25)).f.h, 'kJ/kg'); }
 for (const [n, v, u, ref] of P2) console.log(n.padEnd(26), String(v).padStart(14), u.padEnd(12), ref === '' ? '' : 'book: ' + ref);
+
+// Quiz 2026 (photos)
+{ const m2 = 1500 * (3074 - 2706.3) / (3377 - 3074); console.log('Qz26 m2', m2.toFixed(1), 'm3', (1500 + m2).toFixed(1), 'V2 m3/h', (m2 * S.stateFromPT(500, K(450)).v).toFixed(1));
+  const dP = 200 * 6894.757; console.log('Qz26 pump per 1 ft3/s actual kW', (0.3048 ** 3 * dP / 0.65 / 1000).toFixed(2)); }

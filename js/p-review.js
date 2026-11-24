@@ -116,6 +116,7 @@ ${E.sheetHTML()}
     { q: 'Steam at 10 bar and 400°C is:', c: ['compressed liquid', 'wet steam', 'saturated vapor', 'superheated steam'], a: 3, why: 'T<sub>sat</sub>(10 bar) = 179.9°C < 400°C.', src: 'مثال 1.6' },
     { q: 'At a given pressure, if h > h_g the steam is:', c: ['compressed liquid', 'wet', 'saturated', 'superheated'], a: 3, why: 'فوق g = محمص.', src: 'جداول البخار' },
     { q: 'Steam of "90% quality" has x equal to:', c: ['0.1', '0.9', '90', '0.09'], a: 1, why: 'x = كسر البخار = 0.9.', src: 'مثال 1.8' },
+    { q: 'Across an adiabatic throttling valve (no work, negligible ΔKE):', c: ['T stays constant', 'P stays constant', 'h_in = h_out', 'u_in = u_out'], a: 2, why: 'الصمام: Q = Ws = ΔKE = ΔPE = 0 → ΔH = 0. الضغط ينزل والحرارة تتغير بس h ثابت (كوز 2026).', src: 'كوز 2026' },
     { q: 'Steam turbines cannot tolerate:', c: ['high pressure', 'small amounts of liquid water', 'superheated steam', 'adiabatic operation'], a: 1, why: 'قطرات الماي تخرب الريش.', src: 'جمل الكتاب' },
     { q: 'For an ideal gas compressed reversibly and isothermally in a closed system:', c: ['Q = 0', 'ΔU = 0 so Q = W', 'W = 0', 'ΔH = Q'], a: 1, why: 'الطاقة الداخلية للغاز المثالي تعتمد على T بس.', src: 'كوز الأوكسجين' },
     { q: 'Heat capacity at constant pressure for ideal gases is related to Cv by:', c: ['Cp = Cv', 'Cp = Cv − R', 'Cp = Cv + R', 'Cp = R/Cv'], a: 2, why: 'ولسوائل وصلبة Cp ≈ Cv.', src: 'الكتاب 1.5', scope: 'mid' },
