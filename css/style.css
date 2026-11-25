@@ -220,6 +220,17 @@ label.fld small { font-weight: 400; color: var(--muted); }
 .qbar { height: 18px; border-radius: 9px; background: var(--code); overflow: hidden; direction: ltr; display: flex; }
 .qbar i { background: var(--w); } .qbar b { background: var(--q); }
 
+/* Haywood tables */
+.h9 td, .h8 td { font-variant-numeric: tabular-nums; cursor: pointer; padding: 4px 7px; }
+.h9 th { position: sticky; left: 0; }
+.h9 td.liq { background: var(--accent-soft); }
+.h9 td.stm { background: var(--warn-soft); }
+.h9 td.edge { border-bottom: 3px solid var(--fg); }
+.h9 tr.satrow td { background: var(--code); font-weight: 700; cursor: default; }
+.h9 td.used, .h9 td.sel { outline: 3px solid var(--q); outline-offset: -3px; font-weight: 800; }
+.h8 tr.selrow td { background: var(--ok-soft); font-weight: 700; }
+.h8 tr:hover td { background: var(--accent-soft); }
+
 /* FAB + modal */
 .fab { position: fixed; bottom: 18px; left: 18px; z-index: 40; font: inherit; font-weight: 800; border: 0; border-radius: 999px; padding: 12px 18px; background: var(--accent-2); color: #fff; box-shadow: 0 6px 20px rgba(0,0,0,.25); cursor: pointer; }
 .modal { position: fixed; inset: 0; z-index: 100; background: rgba(10,15,25,.55); display: flex; align-items: flex-start; justify-content: center; padding: 20px 10px; overflow-y: auto; }

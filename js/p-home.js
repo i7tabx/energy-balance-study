@@ -26,6 +26,7 @@
   <a href="#/s11"><b>1.1 الأنظمة + القانون الأول + KE/PE</b><small>الإشارات، متى الحد = صفر، أمثلة 1.1–1.4</small><br><span class="tag hot">أكيد يجي</span> ${E.tag('quiz')}</a>
   <a href="#/s11open"><b>النظام المفتوح + جدول الأجهزة</b><small>Q − Ws = ΔH + ΔKE + ΔPE، مثال 1.5</small><br><span class="tag hot">أكيد يجي</span> ${E.tag('quiz')}</a>
   <a href="#/s11steam"><b>جداول البخار + الجودة + الاستيفاء</b><small>حالة البخار، x، مثال 1.6 + أداة الجداول</small><br><span class="tag hot">أكيد يجي</span> ${E.tag('quiz')}</a>
+  <a href="#/tables"><b>شلون أستعمل جداول البخار</b><small>Table 8 و 9 تفاعلية + استيفاء + تمارين</small><br><span class="tag hot">أكيد يجي</span> ${E.tag('quiz')}</a>
   <a href="#/s11dev"><b>توربين، مبادل، كمبريسر</b><small>أمثلة 1.7–1.10 (انعادت بالامتحانات)</small><br><span class="tag hot">أكيد يجي</span> ${E.tag('quiz')}</a>
   <a href="#/s12"><b>1.2 موازنة الطاقة الميكانيكية</b><small>المضخة، الكفاءة، hp — أمثلة 1.11، 1.12</small><br><span class="tag hot">أكيد يجي</span> ${E.tag('quiz')}</a>
   <a href="#/s13"><b>1.3 برنولي</b><small>مثال 1.13 (الجناح)</small><br><span class="tag med">احتمال كبير</span> ${E.tag('quiz')}</a>

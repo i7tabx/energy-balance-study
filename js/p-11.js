@@ -256,6 +256,7 @@ ${E.table(['رقم الجدول', 'شنو بيه', 'متى أستخدمه'], [
 <div class="box warn"><strong>⚠️ وحدة الضغط بـ Haywood</strong>
 الضغط مكتوب بالـ <b>MN/m²</b> (= MPa) أو kN/m² (= kPa). تحويل سريع: <b class="num">1 bar = 0.1 MN/m² = 100 kN/m²</b>. يعني 10 bar تدورها بالسطر <b>1.00</b>، و 4 bar بالسطر <b>0.40</b>.</div>
 
+<div class="box info"><strong>ما تعرف تقرا الجدول؟</strong> روح لصفحة <a href="#/tables"><b>شلون أستعمل جداول البخار</b></a> — بيها Table 8 و Table 9 من Haywood، تضغط على أي خانة ويشرحلك، ويا تمارين.</div>
 <h2>2) شلون أعرف حالة البخار؟ (Steam state detective)</h2>
 <div class="flow">
   <div class="q">إذا عندي P و T:</div>
