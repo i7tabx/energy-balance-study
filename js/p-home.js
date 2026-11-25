@@ -4,6 +4,7 @@
     id: 'home', group: 'البداية', title: 'الرئيسية', scope: 'quiz',
     render: () => R`
 <h1>موازنة الطاقة — الفصل الأول</h1>
+<a class="box midbox" href="#/midplan" data-setmode="mid" style="display:block;text-decoration:none;color:inherit"><strong>📌 الميد باجر 2:30 ظهراً — حسب توجيهات الدكتورة</strong>سؤالين: <b>برنولي</b> و <b>C<sub>p</sub></b> + الخلط + أشياء بسيطة من جداول البخار. اضغط هنا للخطة و 15 مسألة جديدة محلولة ←</a>
 <p>دليل دراسة كامل من كتاب د. شيماء البزاز + دفتر الملخص + أسئلة السنين. <b>الشرح عربي</b>، و<b>نص الأسئلة والمعادلات إنكليزي</b> مثل الامتحان بالضبط.</p>
 
 <div class="card">
