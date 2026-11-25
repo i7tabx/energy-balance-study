@@ -230,6 +230,7 @@ label.fld small { font-weight: 400; color: var(--muted); }
 .h9 td.used, .h9 td.sel { outline: 3px solid var(--q); outline-offset: -3px; font-weight: 800; }
 .h8 tr.selrow td { background: var(--ok-soft); font-weight: 700; }
 .h8 tr:hover td { background: var(--accent-soft); }
+.cpt tr.badrow td { color: var(--muted); text-decoration: line-through; }
 
 /* FAB + modal */
 .fab { position: fixed; bottom: 18px; left: 18px; z-index: 40; font: inherit; font-weight: 800; border: 0; border-radius: 999px; padding: 12px 18px; background: var(--accent-2); color: #fff; box-shadow: 0 6px 20px rgba(0,0,0,.25); cursor: pointer; }

@@ -22,15 +22,36 @@
 <li><b>أشياء بسيطة من الـ Steam Tables</b>.</li>
 <li>الأسئلة سهلة. الامتحان باجر 2:30 ظهراً، <b>ساعة وحدة</b>.</li>
 </ul></div>
-<div class="box warn"><strong>⚠️ "إحضار المخطط (Chart)"</strong> التبليغ ما حدد أي مخطط. أكثر شي محتمل: <b>جدول السعات الحرارية (Appendix A.2)</b> لأن السؤال الثاني C<sub>p</sub>، أو <b>جداول البخار (Haywood)</b>. وأكو احتمال <b>المخطط السايكرومتري</b>. تأكد من ممثل الشعبة، وجيب الثلاثة احتياط ويا الحاسبة.</div>
+<div class="box warn"><strong>⚠️ الأرقام من الجداول — مو من السؤال</strong> الدكتورة تخليك <b>تطلع الأرقام بنفسك من الجداول</b>: معاملات C<sub>p</sub> من <b>جدول السعات الحرارية</b> بملحق الكتاب، و h و T<sub>sat</sub> من <b>جداول البخار (Haywood)</b>. يعني بكل مسألة <b>أول خطوة = القراءة من الجدول</b>. جيب الجدولين ويا الحاسبة (وهذا الأرجح المقصود بـ "المخطط").</div>
+
+<h2 id="mp-tables">أولاً: الجداول — تعلم تقراها قبل المسائل</h2>
+<p>المسائل تحت كلها تبدي بخطوة "اقرا من الجدول". فتعلم الجدولين هنا أول:</p>
+<h3>1) جدول السعات الحرارية (C<sub>p</sub>) — للسؤال الثاني</h3>
+<div class="box tip"><strong>🧠 شلون تقرا سطر C<sub>p</sub> (4 أشياء)</strong>
+<ol>
+<li><b>المادة والحالة (State):</b> l سائل، g غاز. نفس المادة ممكن إلها سطرين (مثل البنزين: سائل وغاز) — اختار حسب حالتها بالسؤال.</li>
+<li><b>Form:</b> 1 يعني <span class="ltr">a + bT + cT² + dT³</span>، و 2 يعني <span class="ltr">a + bT + cT⁻²</span>.</li>
+<li><b>عمود T:</b> °C أو K — <b>هاي أهم خانة</b>. عوّض حرارتك بنفس الوحدة.</li>
+<li><b>a, b, c, d:</b> انتبه للأسس: <span class="ltr">−2.887×10⁻⁵</span> يعني <span class="ltr">−0.00002887</span>. والخانة الفارغة = صفر.</li>
+</ol>
+الوحدة دائماً <span class="ltr">J/(mol·°C)</span> أو <span class="ltr">J/(mol·K)</span> — فالجواب <span class="ltr">J/mol</span>، اضربه بالمولات (مو بالكيلوغرام!).</div>
+<div data-model="cptbl"></div>
+<h3>2) جداول البخار (Haywood) — للخلط والأشياء البسيطة</h3>
+<ul>
+<li><b>Table 8</b> للبخار المشبع: تختار الضغط وتقرا <span class="ltr">T<sub>sat</sub>, h<sub>f</sub>, h<sub>fg</sub>, h<sub>g</sub></span>.</li>
+<li><b>Table 9</b> للبخار المحمص: تقرا h من تقاطع الضغط ويا الحرارة.</li>
+<li>انتبه للوحدة: <span class="ltr">10 bar = 1.00 MN/m²</span>.</li>
+<li>الشرح الكامل ويا تمارين بصفحة <a href="#/tables"><b>شلون أستعمل جداول البخار</b></a>.</li>
+</ul>
+<div data-model="tbl8"></div>
 
 <h2>خطة الليلة (حوالي 4 ساعات)</h2>
 ${E.table(['الوقت', 'شنو', 'وين'], [
+  ['30 د', '<b>الجداول أول</b>: جرّب جدول C<sub>p</sub> فوق على 5 مواد، و 5 تمارين من جدول البخار', 'فوق ↑ + <a href="#/tables">صفحة الجداول</a>'],
   ['45 د', '<b>برنولي</b>: الوصفة + المسائل B1–B7', 'هاي الصفحة ↓'],
   ['15 د', 'برنولي من الكتاب: مثال 1.13 (الجناح)', '<a href="#/s13">1.3 برنولي</a>'],
   ['60 د', '<b>C<sub>p</sub></b>: الوصفة + المسائل C1–C6 + أمثلة 1.14 و 1.16 و 1.19', 'هاي الصفحة ↓ + <a href="#/s14">1.4</a> + <a href="#/s15">1.5</a>'],
   ['45 د', '<b>الخلط</b>: M1–M3 + مثال 1.20 + سؤال كوز 2026 + فاينل 2024 Q4', 'هاي الصفحة ↓ + <a href="#/exams">أسئلة السنين</a>'],
-  ['30 د', '<b>جداول البخار البسيطة</b>: Table 8 و 9 + 5 تمارين', '<a href="#/tables">شلون أستعمل جداول البخار</a>'],
   ['15 د', 'تحويل وحدات C<sub>p</sub> (فاينل 2025) — احتمال', '<a href="#/exams">أسئلة السنين ← نوع 11</a>']
 ])}
 <p>الطريقة: <b>غطي الحل، وحل على ورقة، بعدين قارن.</b> المسائل هنا مرتبة من الأسهل للأصعب.</p>
@@ -173,9 +194,10 @@ ${E.ex({
 
 <!-- ===================== Cp ===================== -->
 <h2 id="mp-cp">السؤال الثاني: C<sub>p</sub></h2>
-<div class="box tip"><strong>🧠 وصفة C<sub>p</sub> (5 خطوات)</strong>
+<div class="box tip"><strong>🧠 وصفة C<sub>p</sub> (6 خطوات) — الجدول أول</strong>
 <ol>
-<li><b>شوف وحدة T</b> بالمعادلة (°C أو K) — وحوّل حرارتك لنفس الوحدة.</li>
+<li><b>افتح جدول السعات الحرارية</b>: لگّي المادة وحالتها (l أو g)، واكتب a, b, c, d و Form ووحدة T. <a href="#mp-tables">(الجدول فوق ↑)</a></li>
+<li><b>شوف وحدة T</b> بالسطر (°C أو K) — وحوّل حرارتك لنفس الوحدة.</li>
 <li>إذا C<sub>p</sub> <b>ثابت</b>: <span class="ltr">Δh = C<sub>p</sub>(T₂ − T₁)</span>.</li>
 <li>إذا <b>معادلة</b>: كامل حد بحد: <span class="ltr">aΔT + (b/2)(T₂² − T₁²) + (c/3)(T₂³ − T₁³) + (d/4)(T₂⁴ − T₁⁴)</span>.</li>
 <li>إذا <b>خليط</b>: <span class="ltr">C<sub>p,mix</sub> = Σ y<sub>i</sub> C<sub>p,i</sub></span> — ادمج المعاملات أول.</li>
@@ -195,10 +217,11 @@ ${E.ex({
 
 ${E.ex({
   id: 'mp-c2', scope: 'mid', title: 'C2 — Heating CO₂ with a Cp polynomial', src: 'مسألة تدريب (Appendix A.2)',
-  statement: 'Calculate the heat required to raise the temperature of 100 mol/s of CO₂ from 25°C to 500°C at constant pressure. C<sub>p</sub> [J/(mol·°C)] = 36.11 + 4.233×10⁻²T − 2.887×10⁻⁵T² + 7.464×10⁻⁹T³, with T in °C.',
-  given: [['ṅ', '100 mol/s', ''], ['T₁ → T₂', '25 → 500°C', '°C (same as Cp form)']],
+  statement: 'Calculate the heat required to raise the temperature of 100 mol/s of carbon dioxide gas from 25°C to 500°C at constant pressure. Use the heat capacity table in the appendix.',
+  given: [['ṅ', '100 mol/s', ''], ['T₁ → T₂', '25 → 500°C', ''], ['Cp', 'from the table', '']],
   find: 'Q',
   steps: [
+    [R`\text{Table: CO}_2,\ \text{state g, Form 1, } T\ \text{in }^\circ\text{C}:\ a = 36.11,\ b = 0.04233,\ c = -2.887\times10^{-5},\ d = 7.464\times10^{-9}`, '<b>الخطوة الأولى: الجدول.</b> سطر 15 (Carbon dioxide). وحدة T بالسطر °C، والحرارة بالسؤال °C — فنعوض مباشرة.'],
     [R`a(T_2-T_1) = 36.11(500-25) = 17\,152\ \text{J/mol}`, 'كل حد لوحده — أسهل تتابعه بالحاسبة.'],
     [R`\tfrac{b}{2}(T_2^2-T_1^2) = \tfrac{4.233\times10^{-2}}{2}(500^2-25^2) = 5\,278`, ''],
     [R`\tfrac{c}{3}(T_2^3-T_1^3) = \tfrac{-2.887\times10^{-5}}{3}(500^3-25^3) = -1\,203`, 'c سالب فالحد سالب.'],
@@ -213,10 +236,11 @@ ${E.ex({
 
 ${E.ex({
   id: 'mp-c3', scope: 'mid', title: 'C3 — Air with the Kelvin form', src: 'مسألة تدريب (Appendix A.2 — سطر الهوا بالـ K)',
-  statement: 'Air is heated from 300 K to 600 K. Using C<sub>p</sub> [J/(mol·K)] = 28.09 + 0.1965×10⁻²T + 0.4799×10⁻⁵T² − 1.965×10⁻⁹T³ (T in K), calculate Δh per mole of air.',
-  given: [['T₁ → T₂', '300 → 600 K', 'K (same as Cp form)']],
+  statement: 'Air is heated from 300 K to 600 K. Using the heat capacity table in the appendix, calculate Δh per mole of air.',
+  given: [['T₁ → T₂', '300 → 600 K', 'K'], ['Cp', 'from the table', '']],
   find: 'Δh',
   steps: [
+    [R`\text{Table: Air, g, Form 1, } T\ \text{in K}:\ a = 28.09,\ b = 0.001965,\ c = 0.4799\times10^{-5},\ d = -1.965\times10^{-9}`, '<b>الجدول أول.</b> الهوا إله سطرين (°C و K). حرارتنا بالـ K فناخذ سطر K ونعوض مباشرة.'],
     [R`a\Delta T = 28.09(300) = 8427`, ''],
     [R`\tfrac{b}{2}(600^2-300^2) = 0.9825\times10^{-3}(270\,000) = 265.3`, ''],
     [R`\tfrac{c}{3}(600^3-300^3) = 1.600\times10^{-6}(1.89\times10^{8}) = 302.3`, ''],
@@ -245,10 +269,12 @@ ${E.ex({
 
 ${E.ex({
   id: 'mp-c5', scope: 'mid', title: 'C5 — Gas mixture (Σ yᵢCpᵢ)', src: 'مسألة تدريب — فكرة مثال 1.19 من المصادر',
-  statement: 'A gas mixture of 60 mol% CO₂ and 40 mol% CO flowing at 200 mol/min is heated from 100°C to 400°C. Calculate the heat required (kW). C<sub>p</sub> in J/(mol·°C), T in °C:<br>CO₂: 36.11 + 4.233×10⁻²T − 2.887×10⁻⁵T² + 7.464×10⁻⁹T³<br>CO: 28.95 + 0.4110×10⁻²T + 0.3548×10⁻⁵T² − 2.220×10⁻⁹T³',
-  given: [['ṅ', '200 mol/min', ''], ['y', '0.6 CO₂, 0.4 CO', ''], ['T', '100 → 400°C', '']],
+  statement: 'A gas mixture of 60 mol% CO₂ and 40 mol% CO flowing at 200 mol/min is heated from 100°C to 400°C. Using the heat capacity table in the appendix, calculate the heat required (kW).',
+  given: [['ṅ', '200 mol/min', ''], ['y', '0.6 CO₂, 0.4 CO', ''], ['T', '100 → 400°C', ''], ['Cp', 'from the table', '']],
   find: 'Q',
   steps: [
+    [R`\text{CO}_2\ (\text{g},\ ^\circ\text{C}):\ 36.11,\ 0.04233,\ -2.887\times10^{-5},\ 7.464\times10^{-9}`, '<b>الجدول أول:</b> سطر 15 (Carbon dioxide).'],
+    [R`\text{CO}\ (\text{g},\ ^\circ\text{C}):\ 28.95,\ 0.00411,\ 0.3548\times10^{-5},\ -2.220\times10^{-9}`, 'سطر 16 (Carbon monoxide). الاثنين بالـ °C فنكدر ندمجهم.'],
     [R`a_{mix} = 0.6(36.11) + 0.4(28.95) = 33.25`, 'ادمج كل معامل بالكسور المولية.'],
     [R`b_{mix} = 0.6(4.233\times10^{-2}) + 0.4(0.411\times10^{-2}) = 2.704\times10^{-2}`, ''],
     [R`c_{mix} = -1.590\times10^{-5},\qquad d_{mix} = 3.590\times10^{-9}`, ''],
@@ -263,20 +289,39 @@ ${E.ex({
 
 ${E.ex({
   id: 'mp-c6', scope: 'mid', title: 'C6 — Cp + steam tables (heating with condensing steam)', src: 'مسألة تدريب — نفس فكرة مثال 1.19 بس أبسط',
-  statement: 'Liquid benzene flowing at 2000 mol/h is heated from 20°C to 60°C in a heat exchanger using saturated steam at 5 bar, which leaves as saturated liquid at the same pressure. C<sub>p</sub> benzene (l) [J/(mol·°C)] = 126.5 + 0.234T. Calculate the steam flow rate required.',
+  statement: 'Liquid benzene flowing at 2000 mol/h is heated from 20°C to 60°C in a heat exchanger using saturated steam at 5 bar, which leaves as saturated liquid at the same pressure. Using the heat capacity table and the steam tables, calculate the steam flow rate required.',
   diagram: E.dev({ kind: 'hx', name: 'HX', ins: [['benzene 2000 mol/h', '20°C']], outs: [['benzene 60°C']], cold: { in: ['sat. steam 5 bar'], out: ['sat. liquid 5 bar'] } }),
   given: [['ṅ benzene', '2000 mol/h', ''], ['T', '20 → 60°C', ''], ['Steam', 'sat. vapour → sat. liquid, 5 bar', 'Δh = −h_fg']],
   find: 'ṁ_steam',
   assume: [['Q = 0', 'المبادل كله معزول.'], [R`W_s = 0,\ \Delta KE=\Delta PE=0`, '']],
   steps: [
+    [R`\text{Table: Benzene, state } \textbf{l}\text{, } ^\circ\text{C}:\ a = 126.5,\ b = 0.234\ (c = d = 0)`, '<b>الجدول أول:</b> البنزين إله سطرين — <b>سائل (l)</b> وغاز (g). السؤال يكول liquid فناخذ سطر l. والمدى 6–67°C يغطي 20–60 ✓.'],
+    [R`\text{Steam table (Table 8, 0.50 MN/m}^2):\ h_{fg} = 2107.4\ \text{kJ/kg}`, 'والقراءة الثانية من جدول البخار قبل الحساب.'],
     [R`\Delta h_{benz} = 126.5(40) + \tfrac{0.234}{2}(60^2-20^2) = 5060 + 374 = 5434\ \text{J/mol}`, ''],
     [R`\dot Q_{benz} = 2000\times5.434 = 10\,869\ \text{kJ/h}`, ''],
-    [R`\text{Table 8, 0.50 MN/m}^2:\ h_{fg} = 2107.4\ \text{kJ/kg}`, 'قراءة بسيطة من جدول البخار: البخار يتكثف بس، فيعطي h<sub>fg</sub>.'],
-    [R`\dot m_s = \frac{10\,869}{2107.4} = 5.16\ \text{kg/h}`, 'الحرارة اللي يعطيها البخار = اللي ياخذها البنزين.']
+    [R`\dot m_s = \frac{10\,869}{2107.4} = 5.16\ \text{kg/h}`, 'البخار يتكثف بس فيعطي h<sub>fg</sub> لكل kg. الحرارة اللي يعطيها البخار = اللي ياخذها البنزين.']
   ],
   answer: R`\[\dot m_s \approx 5.16\ \text{kg/h}\]`,
   check: 'نفس منطق مثال 1.19 ✓ (هناك x = 0.9 فـ Δh<sub>s</sub> = 0.9h<sub>fg</sub>).',
   trap: '"saturated steam" بدون x يعني x = 1 فـ Δh<sub>s</sub> = −h<sub>fg</sub> بالضبط.'
+})}
+
+${E.ex({
+  id: 'mp-c7', scope: 'mid', title: 'C7 — Methane: choosing the right table row', src: 'مسألة تدريب — تعلم تختار السطر',
+  statement: 'Methane gas flowing at 50 mol/s is heated from 25°C to 300°C. Using the heat capacity table in the appendix, calculate the rate of heat transfer required.',
+  given: [['ṅ', '50 mol/s', ''], ['T', '25 → 300°C', ''], ['Cp', 'from the table', '']],
+  find: 'Q',
+  steps: [
+    [R`\text{Table: Methane (g) has two rows: }^\circ\text{C row and K row}`, '<b>الجدول أول.</b> الميثان إله سطرين. حرارتنا بالـ °C، فأسهل شي ناخذ سطر °C.'],
+    [R`^\circ\text{C row: } a = 34.31,\ b = 0.05469,\ c = 0.3661\times10^{-5},\ d = -1.100\times10^{-8}`, ''],
+    [R`a\Delta T = 34.31(275) = 9435;\quad \tfrac{b}{2}(300^2-25^2) = 2444`, ''],
+    [R`\tfrac{c}{3}(300^3-25^3) = 32.9;\quad \tfrac{d}{4}(300^4-25^4) = -22.3`, ''],
+    [R`\Delta h = 9435 + 2444 + 32.9 - 22.3 = 11\,890\ \text{J/mol}`, ''],
+    [R`Q = 50\times11\,890 = 5.945\times10^{5}\ \text{J/s} = 594.5\ \text{kW}`, '']
+  ],
+  answer: R`\[Q \approx 595\ \text{kW}\]`,
+  check: 'لو استخدمت سطر K (298.15 → 573.15 K) يطلع 11 888 J/mol — نفس الجواب ✓.',
+  trap: 'إذا عوضت 298 و 573 بسطر °C يطلع 15 910 J/mol — غلط بـ 34%! الوحدة لازم تطابق السطر.'
 })}
 
 <!-- ===================== MIXING ===================== -->

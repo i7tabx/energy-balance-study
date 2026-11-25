@@ -73,6 +73,10 @@ ${E.eq(R`y = y_1 + \frac{x - x_1}{x_2 - x_1}\,(y_2 - y_1)`, {
 <div class="card"><b>Degree of superheat</b><br><span class="ltr">T = T<sub>sat</sub> + superheat</span>. مثلاً "10 bar with 190°C of superheat" ← T = 179.9 + 190 = 369.9°C.</div>
 </div>
 
+<h2>جدول السعات الحرارية (C<sub>p</sub>) — ملحق الكتاب</h2>
+<p>هذا الجدول اللي تطلع منه a, b, c, d بسؤال الـ C<sub>p</sub>. اضغط على أي مادة وحط الحرارتين، فيوريك القراءة والتكامل خطوة بخطوة.</p>
+<div data-model="cptbl"></div>
+
 <h2>تمرن: اقرا من الجدول</h2>
 <p>سؤال عشوائي. اكتب الجواب من الجدولين فوق (مو من الأداة!)، وبعدين شوف الحل.</p>
 <div data-model="tblquiz"></div>
