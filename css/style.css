@@ -231,6 +231,18 @@ label.fld small { font-weight: 400; color: var(--muted); }
 .h8 tr.selrow td { background: var(--ok-soft); font-weight: 700; }
 .h8 tr:hover td { background: var(--accent-soft); }
 .cpt tr.badrow td { color: var(--muted); text-decoration: line-through; }
+.tourwrap { max-height: 330px; overflow: auto; border: 1px solid var(--line); border-radius: 10px; scroll-behavior: smooth; direction: ltr; position: relative; }
+.tourtbl td, .tourtbl th { padding: 4px 8px; font-size: .86rem; white-space: nowrap; transition: background .2s, outline .2s; }
+.tourtbl td.liq { background: var(--accent-soft); } .tourtbl td.stm { background: var(--warn-soft); }
+.tourtbl tr.satrow td { background: var(--code); font-weight: 700; }
+.tourtbl tr.hlrow td, .tourtbl tr.hlrow th { background: var(--ok-soft); }
+.tourtbl .hl { outline: 3px solid var(--q); outline-offset: -3px; background: var(--bad-soft) !important; font-weight: 800; }
+.tourtbl tr > :first-child { position: sticky; left: 0; z-index: 1; background: var(--code); }
+.tourtbl tr.hlrow > :first-child { background: var(--ok-soft); }
+.hlchip { outline: 2px solid var(--q); padding: 0 6px; border-radius: 4px; }
+.tour .tm { font-weight: 700; margin-top: 6px; overflow-x: auto; }
+.tnav { align-items: center; margin-top: 10px; }
+.tnav .btn { flex: 0 0 auto; } .tnav .tcount { flex: 1; text-align: center; font-weight: 700; }
 
 /* FAB + modal */
 .fab { position: fixed; bottom: 18px; left: 18px; z-index: 40; font: inherit; font-weight: 800; border: 0; border-radius: 999px; padding: 12px 18px; background: var(--accent-2); color: #fff; box-shadow: 0 6px 20px rgba(0,0,0,.25); cursor: pointer; }
